@@ -11,6 +11,6 @@
 #'
 #' @examples
 #' test_df <- data.frame('a' = c(1,NA,3), 'b' = c(5,6,NA), 'c' = c(NA,1,10))
-#' test_df_imputed <- imputation(test_df, test_df, 'mean)
+#' test_df_imputed <- imputation(test_df, test_df, 'mean')
 imputation <- function(fit_data, fill_data, method){
 }
