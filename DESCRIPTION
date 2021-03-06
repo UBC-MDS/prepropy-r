@@ -1,15 +1,18 @@
 Package: prepropyr
-Title: What the Package Does (One Line, Title Case)
+Title: A R package for data preprocessing
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person('Chun Chieh','Chang',
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "ja.chang0628@gmail.com")
+    person('Pan','Fan',
+           role = c("aut", "cre"),
+           email = "panfanubc@gmail.com")
+    person('Bruhat','Musunuru',
+           role = c("aut", "cre"),
+           email = "bruhatmusunuru@gmail.com")
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
