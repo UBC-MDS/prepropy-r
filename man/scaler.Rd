@@ -4,16 +4,14 @@
 \alias{scaler}
 \title{Scaling a dataframe}
 \usage{
-scaler(X_train, X_Valid, X_test, scale_features, scaler_type)
+scaler(X_train, X_valid, X_test, scaler_type)
 }
 \arguments{
 \item{X_train}{data.frame}
 
-\item{X_Valid}{data.frame}
+\item{X_valid}{data.frame}
 
 \item{X_test}{data.frame}
-
-\item{scale_features}{character vector}
 
 \item{scaler_type}{character}
 }
@@ -21,11 +19,8 @@ scaler(X_train, X_Valid, X_test, scale_features, scaler_type)
 data.frame of data.frames
 }
 \description{
-This function scales numerical features based on scaling requirement in a data.frame
+This function scales numerical features based on scaling requirement(standardization, minmax Scaling) in a data.frame
 }
 \examples{
-X_train<- data.frame('name' = c('pandaman', 'doorman', 'eve'), 'age' = c(15,20,25), 'networth' = c(100000,100,100000))
-X_Valid<- data.frame('name' = c('pandaman_v', 'doorman_v', 'eve_v'), 'age' = c(15,56, 43) , 'networth' = c(123124, 352334,645645)
-X_test <- data.frame('name' = c('pandaman_t', 'doorman_t', 'eve_t'), 'age' =c(14,15,56), 'networth' = c(123124,90914, 124124)
-scaled_df <- scaler(X_train, X_Valid, X_test, c('age','networth'), scaler_type='standardscaler')
+scaled_df <- scaler(X_train, X_Valid, X_test, scaler_type='standardization')
 }
