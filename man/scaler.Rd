@@ -22,5 +22,9 @@ data.frame of data.frames
 This function scales numerical features based on scaling requirement(standardization, minmax Scaling) in a data.frame
 }
 \examples{
+X_train <- data.frame('a' = c(1,2,3), 'b' = c(5,6,3), 'c' = c(2,1,10))
+X_test <- data.frame('a' = c(1,5,3), 'b' = c(5,6,5), 'c' = c(2,5,10))
+X_Valid <- data.frame('a' = c(5,5,3), 'b' = c(5,6,5), 'c' = c(2,5,10))
 scaled_df <- scaler(X_train, X_Valid, X_test, scaler_type='standardization')
+
 }
