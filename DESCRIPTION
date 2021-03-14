@@ -20,7 +20,9 @@ RoxygenNote: 7.1.1
 Imports: 
     dplyr,
     tidyr,
-    magrittr
+    magrittr,
+    GGally,
+    caret
 Suggests: 
     testthat (>= 2.0.0)
 Config/testthat/edition: 2
