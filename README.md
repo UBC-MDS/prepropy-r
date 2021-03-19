@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/UBC-MDS/prepropy-r/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/prepropy-r/actions)
-[![test-coverage](https://github.com/UBC-MDS/prepropy-r/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/prepropy-r/actions/workflows/test-coverage.yaml)
+[![codecov](https://codecov.io/gh/UBC-MDS/prepropy-r/branch/main/graph/badge.svg?token=ZGC19OTEOD)](https://codecov.io/gh/UBC-MDS/prepropy-r)
 <!-- badges: end -->
 
 A R package for data preprocessing 
