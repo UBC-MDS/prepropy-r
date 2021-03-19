@@ -2,6 +2,7 @@
 # prepropyr
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/prepropy-r/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/prepropy-r/actions)
 <!-- badges: end -->
 
 A R package for data preprocessing 
