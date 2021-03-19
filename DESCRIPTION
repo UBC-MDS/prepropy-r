@@ -22,7 +22,10 @@ Imports:
     tidyr,
     magrittr,
     GGally,
-    caret
+    caret,
+    purrr,
+    tibble
 Suggests: 
-    testthat (>= 2.0.0)
+    testthat (>= 2.0.0),
+    covr
 Config/testthat/edition: 2
