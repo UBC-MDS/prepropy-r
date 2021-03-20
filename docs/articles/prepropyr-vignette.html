@@ -111,17 +111,23 @@
 <span class="co">#&gt;   +.gg   ggplot2</span>
 <span class="va">result</span><span class="op">$</span><span class="va">nb_num_features</span>
 <span class="co">#&gt; [1] 4</span></code></pre></div>
-<hr>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">result</span><span class="op">$</span><span class="va">pairplot</span></code></pre></div>
+</div>
+<div id="section" class="section level2">
+<h2 class="hasAnchor">
+<a href="#section" class="anchor"></a><img src="prepropyr-vignette_files/figure-html/eda_result2-1.png" width="80%">
+</h2>
 </div>
 <div id="imputation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#imputation" class="anchor"></a><code>imputation()</code>
 </h2>
 <p>The imputation() function will impute missing data in a tibble/dataframe given the chosen method(mean, median)</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">'a'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="cn">NA</span>,<span class="fl">3</span><span class="op">)</span>, <span class="st">'b'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span>,<span class="cn">NA</span><span class="op">)</span>, <span class="st">'c'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span><span class="op">)</span>
 <span class="va">test_df_imputed</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/imputation.html">imputation</a></span><span class="op">(</span><span class="va">test_df</span>, <span class="va">test_df</span>, <span class="st">'mean'</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test_df_imputed</span>
 <span class="co">#&gt;   a   b    c</span>
 <span class="co">#&gt; 1 1 5.0  5.5</span>
@@ -134,12 +140,12 @@
 <a href="#scaler" class="anchor"></a><code>scaler()</code>
 </h2>
 <p>This function scales numerical features based on scaling requirement(standardization, minmax Scaling) in a data.frame</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X_train</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">'a'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>, <span class="st">'b'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">3</span><span class="op">)</span>, <span class="st">'c'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span><span class="op">)</span>
 <span class="va">X_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">'a'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">3</span><span class="op">)</span>, <span class="st">'b'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">5</span><span class="op">)</span>, <span class="st">'c'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span><span class="op">)</span>
 <span class="va">X_Valid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">'a'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">5</span>,<span class="fl">3</span><span class="op">)</span>, <span class="st">'b'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">5</span><span class="op">)</span>, <span class="st">'c'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span><span class="op">)</span>
 <span class="va">scaled_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/scaler.html">scaler</a></span><span class="op">(</span><span class="va">X_train</span>, <span class="va">X_Valid</span>, <span class="va">X_test</span>, scaler_type<span class="op">=</span><span class="st">'standardization'</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">scaled_df</span>
 <span class="co">#&gt; $train</span>
 <span class="co">#&gt;    a          b          c</span>

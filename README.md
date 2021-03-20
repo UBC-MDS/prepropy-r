@@ -12,6 +12,7 @@ A R package for data preprocessing
 
 Data preprocessing and EDA are essential to any data science project. EDA provides insights into a dataset , visualizes and interprets the information that is hidden in the dataset. Data preprocessing is crucial to get scale features to train better models and handle missing values. In the real world, datasets contain a large number of features and observations and it is unrealistic to expect that raw dataset is perfect and ready for model building. The package aims to facilitate users to perform data imputation, feature scaling and basic exploratory data analysis for machine learning modeling.
 
+A vignettes for this package can be found [here](https://ubc-mds.github.io/prepropy-r/).
 
 ## Features
 

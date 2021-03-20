@@ -45,6 +45,9 @@ result <- eda(df,"target")
 result$nb_num_features
 ```
 
+``` {r eda_result2, out.width='80%'}
+result$pairplot
+```
 ---
 
 ## `imputation()`
