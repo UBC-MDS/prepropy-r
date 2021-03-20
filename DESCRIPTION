@@ -27,5 +27,8 @@ Imports:
     tibble
 Suggests: 
     testthat (>= 2.0.0),
-    covr
+    covr,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 2
+VignetteBuilder: knitr

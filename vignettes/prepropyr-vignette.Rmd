@@ -1,0 +1,80 @@
+---
+author: "Chun Chieh(Jason) Chang, Bruhat Musunuru, Pan Fan"
+title: "prepropyr-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{prepropyr-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(prepropyr)
+```
+
+# Introduction
+
+The functions in `prepropyr` were developed to perform a quick EDA and data imputation and data scaling. Currently `nurser` contains three independent functions, this vignette outlines how to use these functions with toy data.
+
+---
+
+## `eda()` 
+
+The eda() function helps to quickly explore the data by showing a pairplot and some summary statistics for a given dataframe .
+
+```{r, message=FALSE}
+
+df <- data.frame(num1 = c(8.5, 8, 9.2, 9.1, 9.4),
+                  num2 = c(0.88, 0.93, 0.95 , 0.92 , 0.91),
+                  num3 = c(0.46, 0.78, 0.66, 0.69, 0.52),
+                  num4 = c(0.082, 0.078, 0.082, 0.085, 0.066),
+                  cat1 = c("Good","Okay","Excellent","Terrible","Good"),
+                  target = c(2,2,3,1,3))
+```
+After calling the eda() function, we can get following outputs,please see the docstring for more available outputs.
+
+``` {r eda_result}
+result <- eda(df,"target")
+result$nb_num_features
+```
+
+---
+
+## `imputation()`
+
+The imputation() function will impute missing data in a tibble/dataframe given the chosen method(mean, median)
+
+``` {r}
+test_df <- data.frame('a' = c(1,NA,3), 'b' = c(5,6,NA), 'c' = c(NA,1,10))
+test_df_imputed <- imputation(test_df, test_df, 'mean')
+```
+
+```{r impute_result}
+test_df_imputed
+```
+
+---
+
+## `scaler()`
+
+This function scales numerical features based on scaling requirement(standardization, minmax Scaling) in a data.frame
+
+```{r}
+X_train <- data.frame('a' = c(1,2,3), 'b' = c(5,6,3), 'c' = c(2,1,10))
+X_test <- data.frame('a' = c(1,5,3), 'b' = c(5,6,5), 'c' = c(2,5,10))
+X_Valid <- data.frame('a' = c(5,5,3), 'b' = c(5,6,5), 'c' = c(2,5,10))
+scaled_df <- scaler(X_train, X_Valid, X_test, scaler_type='standardization')
+```
+
+```{r scaler_result}
+scaled_df
+```
+
+---
