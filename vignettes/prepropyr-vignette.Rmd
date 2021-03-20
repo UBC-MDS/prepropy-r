@@ -21,7 +21,7 @@ library(prepropyr)
 
 # Introduction
 
-The functions in `prepropyr` were developed to perform a quick EDA and data imputation and data scaling. Currently `nurser` contains three independent functions, this vignette outlines how to use these functions with toy data.
+The functions in `prepropyr` were developed to perform a quick EDA, data imputation and data scaling. Currently `prepropyr` contains three independent functions, this vignette outlines how to use these functions with toy data.
 
 ---
 
