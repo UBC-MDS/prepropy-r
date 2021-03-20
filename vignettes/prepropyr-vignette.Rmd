@@ -1,4 +1,5 @@
 ---
+author: "Chun Chieh(Jason) Chang, Bruhat Musunuru, Pan Fan"
 title: "prepropyr-vignette"
 output: rmarkdown::html_vignette
 vignette: >
@@ -22,6 +23,8 @@ library(prepropyr)
 
 The functions in `prepropyr` were developed to perform a quick EDA and data imputation and data scaling. Currently `nurser` contains three independent functions, this vignette outlines how to use these functions with toy data.
 
+---
+
 ## `eda()` 
 
 The eda() function helps to quickly explore the data by showing a pairplot and some summary statistics for a given dataframe .
@@ -42,6 +45,8 @@ result <- eda(df,"target")
 result$nb_num_features
 ```
 
+---
+
 ## `imputation()`
 
 The imputation() function will impute missing data in a tibble/dataframe given the chosen method(mean, median)
@@ -54,6 +59,8 @@ test_df_imputed <- imputation(test_df, test_df, 'mean')
 ```{r impute_result}
 test_df_imputed
 ```
+
+---
 
 ## `scaler()`
 
@@ -69,3 +76,5 @@ scaled_df <- scaler(X_train, X_Valid, X_test, scaler_type='standardization')
 ```{r scaler_result}
 scaled_df
 ```
+
+---

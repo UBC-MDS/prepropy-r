@@ -81,10 +81,10 @@ scaled_df <- scaler(X_train, X_Valid, X_test, scaler_type='standardization')
 
 ## Installation
 
-You can install the released version of prepropyr from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of prepropyr as follows:
 
 ``` r
-install.packages("prepropyr")
+devtools::install_github("UBC-MDS/prepropy-r")
 ```
 
 ## Contributors
